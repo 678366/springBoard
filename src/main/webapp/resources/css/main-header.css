@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+a:link, a:visited, a:hover, a:active {
+	color: #333;
+	text-decoration: none;
+}
+
+.header_wrap {
+	display: flex;
+	border: 1px solid #333;
+	margin-bottom: 40px;
+	justify-content: space-between;
+}
+
+.h_navbar_wrap {
+	display: flex;
+	text-align: center;
+}
+
+.h_menu {
+	padding-right: 15px;
+	padding-left: 15px;
+	width: 100px;
+	list-style-type: none;
+}
+
+.h_menu a{
+	font-weight: bold;
+	font-size: 1.0625rem;
+}
+
+.header_logo {
+	width: 11.875rem;
+	margin-left: 0;
+}
+
+.header_container {
+	padding-top: 20px;
+}
