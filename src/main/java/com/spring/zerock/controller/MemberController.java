@@ -105,7 +105,6 @@ public class MemberController {
 		int ckNum = random.nextInt(888888) + 111111;
 		log.info("인증번호" + ckNum);
 		
-		// 이메일 전송
 //		String setFrom = "e-mail";
 //		String toMail = email;
 //		String title = "회원가입 인증 이메일입니다.";
