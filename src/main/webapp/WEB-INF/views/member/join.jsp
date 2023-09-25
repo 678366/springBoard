@@ -42,8 +42,8 @@
 						<input class="pwck_input">
 					</div>
 					<span class="final_pwck_ck">비밀번호 확인란을 입력해주세요.</span>
-					<span class="pw_input_false">비밀번호가 일치하지 않습니다.</span>
-					<span class="pw_input_true">비밀번호가 일치합니다.</span>
+					<span class="pwCk_input_false">비밀번호가 일치하지 않습니다.</span>
+					<span class="pwCk_input_true">비밀번호가 일치합니다.</span>
 				</div>
 				<div class="user_wrap">
 					<div class="user_name">이름</div>
@@ -99,6 +99,7 @@
 		<div class="join_button_wrap">
 			<input type="button" class="join_button" value="가입하기">
 		</div>
+		
 	</form>
 </div>
 
@@ -121,34 +122,43 @@
 		$(".join_button").click(function() {
 			
 			console.log("버튼눌렀음");
+			console.log($(".id_input").val());
+			console.log($(".pw_input").val());
+			console.log($(".pwck_input").val());
+			console.log($(".user_input").val());
+			console.log($(".mail_input").val());
+			console.log($(".address_input_1").val());
+			console.log($(".address_input_2").val());
+			console.log($(".address_input_3").val());
 			
 			// 입력값 변수
-			var id = $(".id_input").va1(); // id 입력란
-			var pw = $(".pw_input").va1(); // 비밀번호 입력란
-			var pwck = $(".pwck_input").va1(); // 비밀번호 확인 입력란
-			var name = $(".user_input").va1(); // 이름 입력란
-			var mail = $(".mail_input").va1(); // 이메일 입력란
-			var addr = $(".address_input_3").va1(); // 주소 입력란
+			var id = $(".id_input").val(); // id 입력란
+			var pw = $(".pw_input").val(); // 비밀번호 입력란
+			var pwck = $(".pwck_input").val(); // 비밀번호 확인 입력란
+			var name = $(".user_input").val(); // 이름 입력란
+			var mail = $(".mail_input").val(); // 이메일 입력란
+			var addr = $(".address_input_3").val(); // 주소 입력란
+			
 			
 			// 회원가입 유효성 검사
 			// 아이디 유효성 검사
 			if (id == null || id == "") {
 				$('.final_id_ck').css("display", "block");
-				console.log("result" + idCk);
+				console.log("result: false" + idCk);
+				alert("아이디를 입력해주세요.");
 				idCk = false;
 			} else {
 				$('.final_id_ck').css("display", "none");
-				console.log("result" + idCk);
 				idCk = true;
 			}
 			
 			// 비밀번호 유효성 검사
 			if (pw == null || pw == "") {
 				$('.final_pw_ck').css("display", "block");
+				alert("비밀번호를 입력해주세요.");
 				pwCk = false;
 			} else {
 				$('.final_pw_ck').css("display", "none");
-				console.log(pwCk);
 				pwCk = true;
 			}
 			
@@ -158,7 +168,6 @@
 				pwCkCk = false;
 			} else {
 				$('.final_pwck_ck').css("display", "none");
-				console.log(pwCkCk);
 				pwCkCk = true;
 			}
 			
@@ -168,7 +177,6 @@
 				nameCk = false;
 			} else {
 				$('.final_name_ck').css("display", "none");
-				console.log(nameCk);
 				nameCk = true;
 			}
 			
@@ -178,18 +186,7 @@
 				mailCk = false;
 			} else {
 				$('.final_mail_ck').css("display", "none");
-				console.log(mailCk);
 				mailCk = true;
-			}
-
-			// 이메일 인증번호 유효성 검사
-			if (mailNumCk == null || mailNumCk == "") {
-				$('.final_mail_num_ck').css("display", "block");
-				mailNumCk = false;
-			} else {
-				$('.final_mail_num_ck').css("display", "none");
-				console.log(mailNumCk);
-				mailNumCk = true;
 			}
 
 			// 우편번호 유효성 검사
@@ -198,7 +195,6 @@
 				addrCk = false;
 			} else {
 				$('.final_addr_ck').css("display", "none");
-				console.log(addrCk);
 				addrCk = true;
 			}
 			
@@ -206,9 +202,6 @@
 			if (idCk && idCkCk && pwCk && pwCkCk && nameCk && mailCk && mailNumCk && addrCk) {
 				$("#join_form").attr("action", "/member/join");
 				$("#join_form").submit();
-			} else {
-				console.log("최종유효성검사false");
-				return true;
 			}
 			return false;
 		});
@@ -226,7 +219,7 @@
 			success : function(result) {
 				
 				if(result == "success") {
-					console.log("아이다중복검사 : " + result + "아이디 : " + mId);
+					console.log("아이디중복검사 : " + result + ", 아이디 : " + mId);
 					$(".id_input_re_true").css("display", "inline-block");
 					$(".id_input_re_false").css("display", "none");
 					idCk = true;
@@ -251,20 +244,21 @@
 		$(".final_pwck_ck").css("display", "none");
 		
 		if (mPwCk == null || mPwCk == "") {
-			$(".pw_input_false").css("display", "none");
-			$(".pw_input_true").css("display", "none");
+			$(".pwCk_input_false").css("display", "none");
+			$(".pwCk_input_true").css("display", "none");
 		} else {
 			if(mPw == mPwCk) {
 				console.log("비밀번호 일치");
-				$(".pw_input_true").css("display", "inline-block");
-				$(".pw_input_false").css("display", "none");
+				$(".pwCk_input_true").css("display", "inline-block");
+				$(".pwCk_input_false").css("display", "none");
 				pwCkCk = true;
 			} else if (mPw != mPwCk){
 				console.log("비밀번호 불일치");
-				$(".pw_input_false").css("display", "inline-block");
-				$(".pw_input_true").css("display", "none");
+				$(".pwCk_input_false").css("display", "inline-block");
+				$(".pwCk_input_true").css("display", "none");
 				pwCkCk = false;
-			} 
+			}
+		}
 	});
 	
 	
@@ -322,6 +316,7 @@
 				}
 			}
 		});
+		
 	});
 	
 	// input 이메일 형식 유효성 검사
@@ -379,9 +374,6 @@
 	            }
 	        }).open();
 	    }
-	
-
-	
 	
 </script>
 

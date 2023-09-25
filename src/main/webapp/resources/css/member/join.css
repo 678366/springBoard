@@ -255,13 +255,13 @@
 }
 
 /* 비밀번호 일치하지 않는 경우*/
-.pw_input_false{
+.pwCk_input_false{
 	color : red;
 	display : none;
 }
 
 /* 비밀번호 일치하는 경우 */
-.pw_input_true{
+.pwCk_input_true{
 	color : green;
 	display : none;
 }

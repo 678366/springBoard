@@ -9,7 +9,6 @@
 <title>Main_Header</title>
 
 <!-- CSS -->
-	<link rel="stylesheet" href="../resources/css/bootstrap.css">
 	<link rel="stylesheet" href="../resources/css/main-header.css">
 	<link rel="stylesheet" href="../resources/css/board/get.css">
 	<link rel="stylesheet" href="../resources/css/board/list.css">
