@@ -19,7 +19,6 @@ public class PageMakerDTO {
 		
 	// 전체 게시물의 수
 	private int total;
-	
 
 	// 생성자
 	public PageMakerDTO(Criteria cri, int total ) {

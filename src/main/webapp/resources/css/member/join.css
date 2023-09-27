@@ -8,7 +8,8 @@
 
 /* 화면 전체 렙 */
 .join_wrap{
-	width: 1900px;	
+	width: 1900px;
+	padding-bottom: 80px;	
 }
 
 /* content 랩 */
@@ -156,6 +157,15 @@
     cursor: pointer;
 }
 
+.correct{
+	color : green;
+	display: inline-block;
+}
+.incorrect{
+	color : red;
+	display: none;
+}
+
 /* 주소 영역 */
 .address_wrap{
 	width: 100%;
@@ -222,6 +232,7 @@
 	font-size:28px;
 }
 
+
 /* 가입하기 버튼 */
 .join_button_wrap{
 	margin-top: 40px;
@@ -255,13 +266,13 @@
 }
 
 /* 비밀번호 일치하지 않는 경우*/
-.pw_input_false{
+.pwCk_input_false{
 	color : red;
 	display : none;
 }
 
 /* 비밀번호 일치하는 경우 */
-.pw_input_true{
+.pwCk_input_true{
 	color : green;
 	display : none;
 }

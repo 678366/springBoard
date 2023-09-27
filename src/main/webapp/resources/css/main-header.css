@@ -6,22 +6,33 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .header_wrap {
-	display: flex;
 	border: 1px solid #333;
 	margin-bottom: 40px;
-	justify-content: space-between;
+}
+
+.header_container {
+	padding-top: 20px;
+	display: flex;
+	justify-content: inherit;
+	position: relative;
+}
+
+.header_logo {
+	width: 11.875rem;
+	margin-left: 0;
+	float: left;
 }
 
 .h_navbar_wrap {
-	display: flex;
+	width: auto;
 	text-align: center;
 }
 
 .h_menu {
 	padding-right: 15px;
 	padding-left: 15px;
-	width: 100px;
-	list-style-type: none;
+	margin-bottom:15px;
+	float: left;
 }
 
 .h_menu a{
@@ -29,11 +40,4 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 1.0625rem;
 }
 
-.header_logo {
-	width: 11.875rem;
-	margin-left: 0;
-}
 
-.header_container {
-	padding-top: 20px;
-}

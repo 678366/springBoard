@@ -47,12 +47,19 @@ public class MemberController {
 	@RequestMapping(value = "join", method = RequestMethod.POST)
 	public String joinPOST(MemberVO member) throws Exception {
 		memberservice.mJoin(member);
-		return "redirect:/";
+		log.info("view에서 넘어오나?");
+		return "redirect:/member/joinsuccess";
+	}
+	
+	// 회원가입 완료 페이지 이동
+	@RequestMapping(value = "joinsuccess", method = RequestMethod.GET)
+	public void joinsuccess() {
+		log.info("회원가입 완료");
 	}
 	
 	// 아이디 중복 검사
 	@ResponseBody
-	@RequestMapping(value = "/memberIdCk", method = RequestMethod.POST)
+	@RequestMapping(value = "memberIdCk", method = RequestMethod.POST)
 	public String memberIdCkPOST(String mId) throws Exception {
 		
 		if (mId == null || mId == "") {
@@ -71,30 +78,9 @@ public class MemberController {
 	}
 	
 	
-//	// 비밀번호 일치 확인
-//		@ResponseBody
-//		@RequestMapping(value = "/memberPwCk", method = RequestMethod.POST)
-//		public String memberPwCkPOST(String mPw) throws Exception {
-//			
-//			if (mPw == null || mPw == "") {
-//				log.info("결과 : " + mPw);
-//				return "null";
-//			} else {
-//				int result = memberservice.pWCk(mPw);
-//				if (result != 0) {
-//					log.info("중복 : " + result);
-//					return "success"; // 비밀번호 일치
-//				} else {
-//					log.info("중복없음 : " + result);
-//					return "fail"; // 비밀번호 불일치
-//				}	
-//			}
-//		}
-	
-	
 	// 이메일 인증
 	@ResponseBody
-	@RequestMapping(value = "/mailCk", method = RequestMethod.GET)
+	@RequestMapping(value = "mailCk", method = RequestMethod.GET)
 	public String mailCkGET(String email) throws Exception{
 		log.info("이메일 데이터 확인");
 		log.info("이메일" + email);
@@ -105,7 +91,6 @@ public class MemberController {
 		int ckNum = random.nextInt(888888) + 111111;
 		log.info("인증번호" + ckNum);
 		
-		// 이메일 전송
 //		String setFrom = "e-mail";
 //		String toMail = email;
 //		String title = "회원가입 인증 이메일입니다.";

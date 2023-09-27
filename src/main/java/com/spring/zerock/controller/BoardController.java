@@ -24,13 +24,6 @@ public class BoardController {
 	@Autowired
 	private BoardService boardservice;
 	
-	// 게시물 목록 페이지 접속
-//	@GetMapping("/list")
-//	public void listGET(Model model) {
-//		log.info("게시판 목록 페이지");
-//		model.addAttribute("list", boardservice.getList());
-//	}
-	
 	// 게시판 목록(페이징 적용)
 	@GetMapping("/list")
 	public void boardListGET(Model model, Criteria cri) {
