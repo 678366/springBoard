@@ -173,3 +173,4 @@
 </script>
 </body>
 </html>
+<%@ include file="../includes/footer.jsp"%>

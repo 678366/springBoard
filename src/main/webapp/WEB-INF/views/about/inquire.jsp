@@ -7,10 +7,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>회원가입을 환영합니다.</title>
+<title>문의 페이지</title>
 </head>
 <body>
-	<h1>회원가입을 환영합니다!</h1>
+	<h1>문의 페이지입니다.</h1>
 </body>
 </html>
 <%@ include file="../includes/footer.jsp"%>

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+*{
+	list-style: none;
+	background-color: #f4f7fd;
+}
+
+.footer_list_wrap {
+	width: 170px;
+	display: flex;
+	padding-bottom: 50px;
+	float: left;
+}
+
+
+

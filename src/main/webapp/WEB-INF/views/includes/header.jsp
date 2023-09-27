@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,6 +13,7 @@
 
 <!-- CSS -->
 	<link rel="stylesheet" href="../resources/css/main-header.css">
+	<link rel="stylesheet" href="../resources/css/reset.css">
 	<link rel="stylesheet" href="../resources/css/board/get.css">
 	<link rel="stylesheet" href="../resources/css/board/list.css">
 
@@ -28,13 +30,11 @@
 	    	<div class="h_navbar_wrap">
 	    		<div class="h_navbar_menu">
 	    			<div class="h_menu"><a href="/">홈</a></div>
-	    			<div class="h_menu"><a href="#">회사소개</a></div>
-	    			<div class="h_menu"><a href="#">문의하기</a></div>
+	    			<div class="h_menu"><a href="/about/company">회사소개</a></div>
+	    			<div class="h_menu"><a href="/about/inquire">문의하기</a></div>
 	    			<div class="h_menu"><a href="/board/list">게시판</a></div>
-	    			<div class="h_member">
-		    			<div class="h_login"><a href="/member/login">로그인</a></div>
-		    			<div class="h_join"><a href="/member/join">회원가입</a></div>
-	    			</div>
+	    			<div class="h_menu"><a href="/member/login">로그인</a></div>
+	    			<div class="h_menu"><a href="/member/join">회원가입</a></div>
 	    		</div>
 	    	</div>
     	</div>
