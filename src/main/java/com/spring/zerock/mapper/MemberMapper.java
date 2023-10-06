@@ -9,5 +9,8 @@ public interface MemberMapper {
 	
 	// 중복 아이디 체크
 	public int idCk(String mId);
-
+	
+	// 로그인
+	public MemberVO mLogin(MemberVO member);
+	
 }

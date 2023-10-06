@@ -31,4 +31,11 @@ public class MemberServiceImpl implements MemberService{
 		return mapper.idCk(mId);
 	}
 
+	// 로그인
+	@Override
+	public MemberVO mLogin(MemberVO member) throws Exception {
+		
+		return mapper.mLogin(member);
+	}
+
 }

@@ -9,7 +9,7 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 @Controller
 @RequestMapping("/about/*")
-public class mainController {
+public class MainController {
 
 	// 회사소개 페이지 진입
 	@RequestMapping(value = "company", method = RequestMethod.GET)

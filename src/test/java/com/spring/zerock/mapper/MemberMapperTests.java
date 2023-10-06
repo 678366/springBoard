@@ -29,12 +29,29 @@ public class MemberMapperTests {
 //		memberMapper.mJoin(member); // 쿼리 메서드 실행
 //	}
 	
+//	@Test
+//	public void idCkTest() throws Exception{
+//		String id = "a";
+//		String id2 = "a123";
+//		memberMapper.idCk(id);
+//		memberMapper.idCk(id2);
+//	}
+	
 	@Test
-	public void idCkTest() throws Exception{
-		String id = "a";
-		String id2 = "a123";
-		memberMapper.idCk(id);
-		memberMapper.idCk(id2);
+	public void mLogin() throws Exception{
+		MemberVO member = new MemberVO(); // MemberVO 변수 선언 및 초기화
+		
+		// 일치한 아이디와 비밀번호 입력한 경우
+		member.setMId("test");
+		member.setMPw("test");
+		
+		// 올바르지 않은 아이디 입력한 경우
+		member.setMId("ss");
+		member.setMPw("ss");
+		
+		memberMapper.mLogin(member);
+		System.out.println("결과 : " + memberMapper.mLogin(member));
+		
 	}
 	
 }

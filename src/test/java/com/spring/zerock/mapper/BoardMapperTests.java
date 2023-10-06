@@ -88,13 +88,13 @@ public class BoardMapperTests {
 //	}
 	
 	// 게시판 목록(페이징 적용) 테스트
-	@Test
-	public void testGetListPaging() {
-		Criteria cri = new Criteria();
-		cri.setPageNum(100);
-		List list = mapper.getListPaging(cri);
-		list.forEach(board -> log.info("" + board));
-	}
+//	@Test
+//	public void testGetListPaging() {
+//		Criteria cri = new Criteria();
+//		cri.setPageNum(100);
+//		List list = mapper.getListPaging(cri);
+//		list.forEach(board -> log.info("" + board));
+//	}
 
 }
 

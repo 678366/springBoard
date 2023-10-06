@@ -10,4 +10,6 @@ public interface MemberService {
 	// 아이디 중복 체크
 		public int idCk(String memberId) throws Exception;
 
+	// 로그인
+		public MemberVO mLogin(MemberVO member) throws Exception;
 }
