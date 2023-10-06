@@ -40,4 +40,17 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 1.0625rem;
 }
 
+.login_success_wrap {
+	height: 62%;
+    width: 80%;
+    border: 2px solid #7474ad;
+    border-radius: 15px;
+    margin: 5% auto;
+    padding-top: 5%;
+}
 
+.login_success_wrap>span{
+ 	display : block;
+    text-align: left;
+    margin-left: 10%;
+}

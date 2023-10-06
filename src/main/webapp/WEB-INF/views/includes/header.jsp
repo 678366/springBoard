@@ -33,7 +33,14 @@
 	    			<div class="h_menu"><a href="/about/company">회사소개</a></div>
 	    			<div class="h_menu"><a href="/about/inquire">문의하기</a></div>
 	    			<div class="h_menu"><a href="/board/list">게시판</a></div>
-	    			<div class="h_menu"><a href="/member/login">로그인</a></div>
+	    			<c:if test="${member == null}">
+	    				<div class="h_menu"><a href="/member/login">로그인</a></div>
+	    			</c:if>
+	    			<c:if test="${ member != null }">
+	    				<div class="login_success_wrap h_menu">
+	    					<span>${member.mId}</span>
+	    				</div>
+	    			</c:if>
 	    			<div class="h_menu"><a href="/member/join">회원가입</a></div>
 	    		</div>
 	    	</div>
