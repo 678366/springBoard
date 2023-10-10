@@ -2,14 +2,30 @@
 
 *{
 	list-style: none;
-	background-color: #f4f7fd;
+}
+
+.footer_wrap {
+	display: flex;
+	float: left;
 }
 
 .footer_list_wrap {
 	width: 170px;
-	display: flex;
 	padding-bottom: 50px;
-	float: left;
+}
+
+ .footer_company_wrap {
+	width: 170px;
+	padding-bottom: 50px;
+}
+
+.footer_customer_wrap {
+	width: 170px;
+	padding-bottom: 50px;
+}
+
+.footer_title {
+	font-weight: bold;
 }
 
 

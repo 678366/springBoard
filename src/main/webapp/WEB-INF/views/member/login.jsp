@@ -1,6 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../includes/header.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,6 +11,7 @@
 <link rel="stylesheet" href="../../../resources/css/member/login.css">
 <title>로그인 페이지</title>
 </head>
+<%@ include file="../includes/header.jsp" %>
 <body>
 
 	<div class="wrapper">
@@ -20,15 +22,15 @@
 				</div>
 				<div class="login_wrap"> 
 					<div class="id_wrap">
-							<span>아이디</span>
+							<div class="id_pw_name">아이디</div>
 							<div class="id_input_box">
 							<input class="id_input" name="mId">
 						</div>
 					</div>
 					<div class="pw_wrap">
-						<span>비밀번호</span>
+						<div class="id_pw_name">비밀번호</div>
 						<div class="pw_input_box">
-							<input class="pw_iput" name="mPw">
+							<input type="password" class="pw_iput" name="mPw">
 						</div>
 						<c:if test="${result == 0}">
 							<div class="login_warn">아이디 또는 비밀번호를 다시 확인해 주세요.</div>
@@ -47,7 +49,7 @@
 	<script>
 		// 로그인 버튼 클릭
 		$(".login_button").click(function() {
-			alert("로그인 버튼 작동")
+			alert("로그인 버튼 작동");
 			$("#login_form").attr("action", "/member/login");
 			$("#login_form").submit();
 		});

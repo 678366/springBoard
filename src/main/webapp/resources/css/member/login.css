@@ -1,10 +1,4 @@
 @charset "UTF-8";
-*{
-	margin: 0;
-	padding:0;
-}
-
-/* 화면 전체 렙 */
 
 /* content 랩 */
 @media screen and (max-width: 800px) {
@@ -47,20 +41,34 @@
 	font-weight: 900;
 }
 
-
 /* 로그인 area */
+
+.login_wrap {
+	text-align: center;
+}
+
+.id_pw_name {
+	margin-bottom: 15px;
+	font-weight: bolder;
+	font-size: 15pt;
+}
+
 .id_input_box{
 	border: 1px solid black;
 	padding: 10px 14px;	
 	display: block;
 	width : 80%;
-	margin : auto;	
+	margin : auto;
+	border-radius: 40px;
 }
 .id_input{
 	width:100%;
 	height:100%;
 	border:none;
 	font-size:28px;
+	background-color: transparent;
+	border-radius: 40px;
+	outline: none;
 }
 
 .pw_wrap{
@@ -71,20 +79,25 @@
 	padding: 10px 14px;	
 	display: block;
 	width : 80%;
-	margin : auto;	
+	margin : auto;
+	border-radius: 40px;
 }
 .pw_iput{
 	width:100%;
 	height:100%;
 	border:none;
 	font-size:28px;
+	background-color: transparent;
+	border-radius: 40px;
+	outline: none;
 }
 
 .login_button_wrap{
-	margin-top: 40px;
+	margin-top: 100px;
 	margin-bottom: 40px;
 	text-align: center;
 }
+
 .login_button{
 	border: 1px solid black;
 	padding: 10px 14px;	

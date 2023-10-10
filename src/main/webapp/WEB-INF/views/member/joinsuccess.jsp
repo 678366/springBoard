@@ -10,7 +10,7 @@
 <title>회원가입을 환영합니다.</title>
 </head>
 <body>
-	<h1>회원가입을 환영합니다!</h1>
+	<h1>&nbsp;회원가입을 환영합니다!</h1>
 </body>
 </html>
 <%@ include file="../includes/footer.jsp"%>

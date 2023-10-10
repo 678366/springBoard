@@ -23,7 +23,7 @@
 					<li class="footer_item"><a>고객센터</a></li>
 				</ul>
 			</div>
-			<div class="footer_wrap">
+			<div class="footer_company_wrap">
 				<ul class="footer_list_wrap">
 					<li class="footer_title">회사</li>
 					<li class="footer_item"><a>회사 소개</a></li>
@@ -32,7 +32,7 @@
 					<li class="footer_item"><a>고객센터</a></li>
 				</ul>
 			</div>
-			<div class="footer_wrap">
+			<div class="footer_customer_wrap">
 				<ul class="footer_list_wrap">
 					<li class="footer_title">고객센터</li>
 					<li class="footer_item"><a>전화: 1234-5678 (24시간 연중무휴)</a></li>

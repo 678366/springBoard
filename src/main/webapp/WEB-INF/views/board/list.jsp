@@ -16,10 +16,8 @@
 			<tr>
 				<th class="bno_width">번호</th>
 				<th class="title_width">제목</th>
-				<th class="content_width">내용</th>
 				<th class="writer_width">작성자</th>
 				<th class="regdate_width">작성일</th>
-				<th class="updatedate_width">수정일</th>
 			</tr>
 		</thead>
 		<c:forEach items="${list}" var="list">
@@ -30,10 +28,8 @@
 						<c:out value="${list.title}"/>
 					</a>
 				</td>
-				<td><c:out value="${list.content}"/></td>
 				<td><c:out value="${list.writer}"/></td>
 				<td><fmt:formatDate pattern="yyyy/MM/dd" value="${list.regDate}"/></td>
-				<td><fmt:formatDate pattern="yyyy/MM/dd" value="${list.updateDate}"/></td>
 			</tr>
 		</c:forEach>
 	</table>

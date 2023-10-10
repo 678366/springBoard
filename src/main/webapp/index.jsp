@@ -10,9 +10,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>처음화면</title>
 </head>
-<%@ include file="WEB-INF/views/includes/header.jsp"%>
+<jsp:include page="WEB-INF/views/includes/header.jsp"></jsp:include>
 <body>
 	<%@ include file="WEB-INF/views/includes/main.jsp"%>
+	
 </body>
 </html>
 <%@ include file="WEB-INF/views/includes/footer.jsp"%>

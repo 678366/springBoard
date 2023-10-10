@@ -6,10 +6,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../../../resources/css/main-header.css">
-<title>메인화면</title>
+<title>main</title>
 </head>
 <body>
-	<h1 style="height: 1000px;">&nbsp;메인페이지</h1>
+	
 </body>
 </html>

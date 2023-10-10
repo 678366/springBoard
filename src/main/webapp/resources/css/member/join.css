@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
-*{
-	margin: 0;
-	padding:0;
-}
-
 /* 화면 전체 렙 */
 .join_wrap{
 	width: 1900px;
